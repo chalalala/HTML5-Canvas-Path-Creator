@@ -51,6 +51,10 @@ class Program {
 		bindCheckbox("#reverseX", "reverseX");
 		bindCheckbox("#reverseY", "reverseY");
 
+		this.$canvas.on("contextmenu", (event) => {
+			event.preventDefault();
+		});
+
 		$("#clear").on("click", () => {
 			this.points = [];
 			this.storeInHistory();
